@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_relativeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.2dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:id="@+id/item_img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginVertical="10dp"
+                    android:maxWidth="90dp"
+                    android:maxHeight="100dp"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="top"
+                    android:src="@drawable/ic_baseline_add_a_photo_24"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:id="@+id/item_name"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_toRightOf="@+id/item_img"
+                        android:text="item_name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+
+                        android:id="@+id/item_desc"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/item_img"
+                        android:layout_below="@+id/item_name"
+                        android:text="item_description"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/item_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="₹300"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/item_original_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:foreground="@drawable/strike_through"
+                            android:text="₹500" />
+
+                        <TextView
+                            android:id="@+id/item_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="5%off"
+                            android:textColor="@color/teal_700"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:layout_toRightOf="@+id/item_img"
+                        android:layout_below="@+id/price"
+                        android:layout_marginLeft="14dp">
+
+                        <TextView
+                            android:id="@+id/item_qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Qty:1"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/item_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Size:50gm"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/uqty"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:hint="Enter Quantity"
+                    android:textSize="10dp"
+                    android:layout_height="45dp"/>
+
+                <TextView
+                    android:id="@+id/btn_remove"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="4"
+                    android:layout_below="@+id/price"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@color/pink"
+                    android:layout_toEndOf="@+id/item_img"
+                    android:layout_toRightOf="@+id/item_name"
+                    android:text="add to cart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="55dp"
+    tools:context=".fragments.Medicine_listing_fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <SearchView
+            android:id="@+id/medsrc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            tools:ignore="InvalidId"
+            android:queryHint="Search Medicines"
+            />
+        <LinearLayout
+            android:padding="2dp"
+            android:background="@color/card"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/sdimg"
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/ic_baseline_add_a_photo_24"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="11dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="2dp"
+                    android:id="@+id/sdname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Name"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+
+                    />
+                <TextView
+                    android:padding="2dp"
+                    android:id="@+id/sdaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="address"
+                    android:textSize="19dp"
+                    />
+
+                <TextView
+                    android:padding="2dp"
+                    android:id="@+id/sdemail"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+
+                    />
+
+                <TextView
+                    android:padding="2dp"
+                    android:id="@+id/sdphone"
+                    android:textSize="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="phone"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopmedrclv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
